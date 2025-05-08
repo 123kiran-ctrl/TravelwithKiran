@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget Travel Tips - Travel with Kiran</title>
+    <link rel="stylesheet" href="budget-tips.css">
+</head>
+<body>
+    <header>
+        <h1>Budget Travel Tips</h1>
+    </header>
+
+    <section>
+        <h2>How to Travel on a Budget</h2>
+        <ul>
+            <li>Book flights early to get the best deals.</li>
+            <li>Travel during off-season for cheaper rates.</li>
+            <li>Stay in hostels or budget accommodations.</li>
+            <li>Use public transportation instead of taxis.</li>
+            <li>Eat like a local — avoid tourist restaurants.</li>
+            <li>Look for free walking tours or local events.</li>
+            <li>Use travel apps to find discounts on food and attractions.</li>
+        </ul>
+    </section>
+    <section id="itinerary">
+        <h2>Interactive Trip Plans</h2>
+        <p>Select your destination to view suggested itineraries.</p>
+    
+        <!-- Destination Dropdown -->
+        <select id="destinationSelect">
+            <option value="bali">Bali</option>
+            <option value="kathmandu">Kathmandu</option>
+            <option value="pokhara">Pokhara</option>
+            <option value="paris">Paris</option>
+        </select>
+    
+        <!-- Display Itinerary Based on Selection -->
+        <div id="itineraryDetails">
+            <p>Choose a destination to see the itinerary.</p>
+        </div>
+    </section>
+    
+    <script>
+        const itineraryDetails = document.getElementById('itineraryDetails');
+        const destinationSelect = document.getElementById('destinationSelect');
+    
+        const itineraries = {
+            bali: {
+                title: "Bali Itinerary (7 Days)",
+                days: [
+                    "Day 1: Arrival and Explore Ubud",
+                    "Day 2: Beach Day at Kuta",
+                    "Day 3: Visit Tanah Lot Temple",
+                    "Day 4: Explore Uluwatu",
+                    "Day 5: Hiking Mt. Batur",
+                    "Day 6: Day trip to Nusa Penida",
+                    "Day 7: Relaxation and Shopping"
+                ]
+            },
+            kathmandu: {
+                title: "Kathmandu Itinerary (5 Days)",
+                days: [
+                    "Day 1: Arrival and Thamel Exploration",
+                    "Day 2: Visit Pashupatinath Temple and Boudhanath Stupa",
+                    "Day 3: Swayambhunath (Monkey Temple)",
+                    "Day 4: Day trip to Bhaktapur",
+                    "Day 5: Shopping and Departure"
+                ]
+            },
+            pokhara: {
+                title: "Pokhara Itinerary (4 Days)",
+                days: [
+                    "Day 1: Arrival and Lakeside Walk",
+                    "Day 2: Visit World Peace Pagoda and Sarangkot",
+                    "Day 3: Boating in Phewa Lake and Explore Caves",
+                    "Day 4: Paragliding and Relax"
+                ]
+            },
+            paris: {
+                title: "Paris Itinerary (5 Days)",
+                days: [
+                    "Day 1: Arrival and Eiffel Tower",
+                    "Day 2: Louvre Museum and Seine River Cruise",
+                    "Day 3: Montmartre and Sacré-Cœur",
+                    "Day 4: Palace of Versailles",
+                    "Day 5: Shopping and Departure"
+                ]
+            }
+        };
+    
+        // Update Itinerary based on selection
+        destinationSelect.addEventListener('change', function() {
+            const selectedDestination = destinationSelect.value;
+            const itinerary = itineraries[selectedDestination];
+    
+            if (itinerary) {
+                itineraryDetails.innerHTML = `
+                    <h3>${itinerary.title}</h3>
+                    <ul>
+                        ${itinerary.days.map(day => `<li>${day}</li>`).join('')}
+                    </ul>
+                `;
+            }
+        });
+    </script>
+    <section id="downloadable-itinerary">
+        <h2>Downloadable Trip Plans</h2>
+        <p>Click below to download a suggested trip plan for popular destinations:</p>
+        
+        <ul>
+            <li><a href="files/bali-itinerary.pdf" download="Bali_Itinerary">Download Bali Itinerary</a></li>
+            <li><a href="files/kathmandu-itinerary.pdf" download="Kathmandu_Itinerary">Download Kathmandu Itinerary</a></li>
+            <li><a href="files/pokhara-itinerary.pdf" download="Pokhara_Itinerary">Download Pokhara Itinerary</a></li>
+            <li><a href="files/paris-itinerary.pdf" download="Paris_Itinerary">Download Paris Itinerary</a></li>
+        </ul>
+    </section>
+    
+    
+
+    <footer>
+        <p>&copy; 2025 Travel with Kiran. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

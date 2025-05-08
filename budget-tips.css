@@ -1,0 +1,219 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 80px; /* space for footer */
+}
+
+/* Header styles */
+header {
+    background-color: #2e86de;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1b4f72;
+}
+
+/* Section content */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #2e86de;
+}
+
+/* Tip list */
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+/* Footer styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2e86de;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.9em;
+}
+/* Ensure the itinerary section looks good on smaller screens */
+#itinerary, #downloadable-itinerary {
+    margin: 20px;
+    padding: 15px;
+}
+
+#itinerary select, #downloadable-itinerary a {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 600px) {
+    #itinerary select, #downloadable-itinerary a {
+        width: auto;
+    }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Interactive Trip Plans Section */
+#itinerary {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#itinerary p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+#destinationSelect {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#itineraryDetails {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#itineraryDetails ul {
+    list-style-type: none;
+}
+
+#itineraryDetails li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Downloadable Itinerary Templates Section */
+#downloadable-itinerary {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#downloadable-itinerary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#downloadable-itinerary li {
+    margin-bottom: 10px;
+}
+
+#downloadable-itinerary a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#downloadable-itinerary a:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #destinationSelect {
+        width: 100%;
+    }
+
+    #itineraryDetails {
+        padding: 15px;
+    }
+
+    #downloadable-itinerary a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    #destinationSelect {
+        width: auto;
+    }
+
+    #downloadable-itinerary a {
+        width: auto;
+        display: inline-block;
+    }
+}
+

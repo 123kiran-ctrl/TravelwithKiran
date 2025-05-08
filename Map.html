@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel with Kiran - Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel with Kiran - Interactive Map</h1>
+    </header>
+
+    <section id="map-container">
+        <h2>Places I've Visited</h2>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel with Kiran. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([28.7041, 77.1025], 5); // Example center: India (you can update the coordinates)
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add markers (places visited with links to blog posts)
+        const places = [
+            {
+                name: "Bali",
+                lat: -8.3405,
+                lon: 115.0919,
+                link: "https://yourblog.com/bali-adventure"
+            },
+            {
+                name: "Kathmandu",
+                lat: 27.7172,
+                lon: 85.3240,
+                link: "https://yourblog.com/kathmandu-culture-tour"
+            },
+            {
+                name: "Pokhara",
+                lat: 28.2096,
+                lon: 83.9856,
+                link: "https://yourblog.com/pokhara-lakeside"
+            }
+        ];
+
+        // Add a pin for each place
+        places.forEach(place => {
+            const marker = L.marker([place.lat, place.lon]).addTo(map);
+            marker.bindPopup(`<b>${place.name}</b><br><a href="${place.link}" target="_blank">Read the blog post</a>`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<html>
+    <body>
+<link rel="stylesheet" href="Essential.css">
+<section id="trip-checklist">
+    <h2>🧳 Trip Planning Checklist</h2>
+    <p>Check off items as you plan your trip!</p>
+  
+    <ul id="checklist">
+      <li><input type="checkbox" id="passport"><label for="passport"> Passport / Visa</label></li>
+      <li><input type="checkbox" id="flights"><label for="flights"> Book Flights</label></li>
+      <li><input type="checkbox" id="accommodation"><label for="accommodation"> Reserve Accommodation</label></li>
+      <li><input type="checkbox" id="insurance"><label for="insurance"> Travel Insurance</label></li>
+      <li><input type="checkbox" id="packing"><label for="packing"> Start Packing</label></li>
+      <li><input type="checkbox" id="currency"><label for="currency"> Exchange Currency</label></li>
+      <li><input type="checkbox" id="maps"><label for="maps"> Download Offline Maps</label></li>
+      <li><input type="checkbox" id="chargers"><label for="chargers"> Pack Chargers / Power Bank</label></li>
+    </ul>
+  </section>
+  <h2> Itinerary Shop</h2>
+    <p>You Can Buy From Here.</p>
+  <select id="categorySelect">
+    <option value="gear">Travel Gear</option>
+    <option value="books">Books & Guidebooks</option>
+    <option value="souvenir">Souvenirs</option>
+  </select>
+  
+  <button onclick="findNearbyShopsAndAttractions()">Find Nearby</button>
+  
+  <!-- This is where the result will appear -->
+  <div id="shopResults"></div>  
+  
+  <script src="Essential.js"></script>
+  </body>
+  </html>
+  

@@ -1,0 +1,109 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the Trip Checklist Section */
+#trip-checklist {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Styling for <h2> */
+h2 {
+    font-size: 2.5rem; /* You can adjust this size as needed */
+    line-height: 1.4;
+    color: #2c3e50;
+    text-align: center; /* Centering the title */
+    margin-bottom: 15px;
+}
+
+/* Custom Styling for <p> */
+p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling the Checklist */
+#checklist {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#checklist li {
+    margin: 10px 0;
+}
+
+#checklist input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#checklist label {
+    font-size: 1.1rem;
+}
+
+/* Styling for the Category Select Dropdown */
+#categorySelect {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Styling for the Button */
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Styling for Shop Results */
+#shopResults {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #categorySelect {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

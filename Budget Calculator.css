@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  #budget-calculator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  #budget-calculator h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  #budget-calculator label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #budget-calculator input, #budget-calculator select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #budgetResult {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 

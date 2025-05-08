@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel with Kiran</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Travel with Kiran</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destination.html">Destination</a></li>
+                <li><a href="budget-tips.html">Budget Travel Tips</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Map.html">Map</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Essential.html">Essential</a></li>
+                <li><a href="Budget Calculator.html">Budget Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+       
+      
+      
+      <footer>
+        <p id="footerCopyright">© 2025 Travel with Kiran. All Rights Reserved.</p>
+      </footer>
+      
+      <section id="about">
+        <h2 id="aboutTitle">About Me</h2>
+        <p id="aboutContent">Hi, I'm Kiran, an avid traveler who loves sharing tips, guides, and personal stories about the world's best destinations!</p>
+      </section>
+      
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Kiran, an avid traveler who loves sharing tips, guides, and personal stories about the world's best destinations!</p>
+    </section>
+
+    <section id="destination">
+        <h2>Top Destinations</h2>
+        <p>Explore amazing travel guides and recommendations for various destinations worldwide!</p>
+
+        
+
+    <section id="budget-tips">
+        <h2>Budget Travel Tips</h2>
+        <p>Learn how to travel on a budget with my helpful tips and hacks!</p>
+    </section>
+
+    <section id="blog">
+        <h2>My Travel Blog</h2>
+        <p>Check out my latest travel stories and experiences from around the globe!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have questions or want to collaborate? Get in touch!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel with Kiran. All Rights Reserved.</p>
+    </footer>
+
+    <!-- 🔧 JavaScript -->
+    <script>
+        // 🔍 Search & Filter Logic
+        const searchInput = document.getElementById('searchInput');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const posts = document.querySelectorAll('.post');
+
+        function filterPosts() {
+            const searchText = searchInput.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+
+            posts.forEach(post => {
+                const title = post.getAttribute('data-title').toLowerCase();
+                const category = post.getAttribute('data-category');
+
+                const matchesSearch = title.includes(searchText);
+                const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+
+                post.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+            });
+        }
+
+        searchInput.addEventListener('input', filterPosts);
+        categoryFilter.addEventListener('change', filterPosts);
+
+        // 🖼️ Image click-to-enlarge
+        document.querySelectorAll('.gallery-container img').forEach(img => {
+            img.addEventListener('click', () => {
+                const popup = document.createElement('div');
+                popup.style.position = 'fixed';
+                popup.style.top = 0;
+                popup.style.left = 0;
+                popup.style.width = '100%';
+                popup.style.height = '100%';
+                popup.style.background = 'rgba(0,0,0,0.8)';
+                popup.style.display = 'flex';
+                popup.style.alignItems = 'center';
+                popup.style.justifyContent = 'center';
+                popup.style.zIndex = 9999;
+
+                const fullImg = document.createElement('img');
+                fullImg.src = img.src;
+                fullImg.style.maxWidth = '90%';
+                fullImg.style.maxHeight = '90%';
+                fullImg.style.borderRadius = '10px';
+
+                popup.appendChild(fullImg);
+                document.body.appendChild(popup);
+
+                popup.addEventListener('click', () => popup.remove());
+            });
+        });
+    </script>
+
+
+</body>
+</html>

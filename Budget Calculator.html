@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Budget Calculator</title>
+  <link rel="stylesheet" href="Budget Calculator.css">
+</head>
+<body>
+
+  <section id="budget-calculator">
+    <h2>Travel Budget Calculator</h2>
+    <form id="budgetForm">
+      <label>Destination:
+        <input type="text" id="destination" required>
+      </label>
+
+      <label>Number of Days:
+        <input type="number" id="days" min="1" required>
+      </label>
+
+      <label>Travel Style:
+        <select id="style">
+          <option value="budget">Budget</option>
+          <option value="mid">Mid-range</option>
+          <option value="luxury">Luxury</option>
+        </select>
+      </label>
+
+      <label>Flight Cost ($):
+        <input type="number" id="flight" min="0" required>
+      </label>
+
+      <label>Accommodation per Night ($):
+        <input type="number" id="accommodation" min="0" required>
+      </label>
+
+      <label>Food per Day ($):
+        <input type="number" id="food" min="0" required>
+      </label>
+
+      <label>Activities per Day ($):
+        <input type="number" id="activities" min="0" required>
+      </label>
+
+      <label>Transport Total ($):
+        <input type="number" id="transport" min="0" required>
+      </label>
+
+      <label>Miscellaneous ($):
+        <input type="number" id="misc" min="0" required>
+      </label>
+
+      <button type="submit">Calculate Budget</button>
+    </form>
+
+    <div id="budgetResult"></div>
+  </section>
+   <script src="Budget Calculator.js"></script>
+
+</body>
+</html>
